@@ -10,7 +10,6 @@ public class EmployeeTest {
         System.out.println("1st Employee's name is " + employee1.employeeName +" "+ "and his new salary is " + employee1.increaseSalary()+"€");
         System.out.println("2nd Employee's name is " + employee2.employeeName +" "+ "and his new salary is " + employee2.increaseSalary()+"€");
 
-
     }
 
 }
