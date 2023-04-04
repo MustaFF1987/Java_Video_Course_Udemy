@@ -8,7 +8,15 @@ public class Employee {
     double employeeSalary;
     String employeeDepartment;
 
-    double increaseSalary(double employeeSalary){
+    public Employee(int employeeId, String employeeName, int employeeAge, double employeeSalary, String employeeDepartment) {
+        this.employeeId = employeeId;
+        this.employeeName = employeeName;
+        this.employeeAge = employeeAge;
+        this.employeeSalary = employeeSalary;
+        this.employeeDepartment = employeeDepartment;
+    }
+
+    double increaseSalary(){
     return (employeeSalary*2);
     }
 

@@ -3,27 +3,14 @@ package OOP;
 public class EmployeeTest {
     public static void main(String[] args) {
 
-        Employee employee1 = new Employee();
-        Employee employee2 = new Employee();
-
-        employee1.employeeName = "Pavel_Yu";
-        employee1.employeeAge = 36;
-        employee1.employeeDepartment = "IT";
-
-        employee2.employeeName = "Max_Yu";
-        employee2.employeeAge = 46;
-        employee2.employeeDepartment = "IT";
+        Employee employee1 = new Employee(123,"Pavel_Yu", 36, 1500,"IT");
+        Employee employee2 = new Employee(456,"Max_Wu", 45,3250, "IT");
 
 
-        System.out.print("Employee1 " + employee1.employeeName);
-        System.out.print(", Age " + employee1.employeeAge);
-        System.out.print(", Department " + employee1.employeeDepartment);
-        System.out.println(", New Salary: " + (int)employee1.increaseSalary(2000)+ "€");
+        System.out.println("1st Employee's name is " + employee1.employeeName +" "+ "and his new salary is " + employee1.increaseSalary()+"€");
+        System.out.println("2nd Employee's name is " + employee2.employeeName +" "+ "and his new salary is " + employee2.increaseSalary()+"€");
 
-        System.out.print("Employee2 " + employee2.employeeName);
-        System.out.print(", Age " + employee2.employeeAge);
-        System.out.print(", Department " + employee2.employeeDepartment);
-        System.out.print(", New Salary: " + (int)employee2.increaseSalary(3000) + "€");
+
     }
 
 }
