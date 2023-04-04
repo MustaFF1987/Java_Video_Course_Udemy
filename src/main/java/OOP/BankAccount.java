@@ -2,32 +2,32 @@ package OOP;
 
 public class BankAccount {
 
-    int userId;
-    String userName;
-    double userBalance;
+    int userId = 12345;
+    String userName = "Pavel_Yu";
+    double userBalance = 100;
 
-    double addMoney(double add) {
-        double newBalance = userBalance + add;
-        return newBalance;
+    void addMoney(double add) {
+        System.out.println("User " + userName + " User's Id " + userId);
+        System.out.println("User's Current Balance " + userBalance);
+        userBalance += add;
+        System.out.println("User's New Balance " + userBalance);
+        System.out.println("------------------------------");
     }
 
-    double withdrawMoney(double withdraw) {
-        double newBalance = userBalance - withdraw;
-        return newBalance;
-
+   void withdrawMoney(double withdraw) {
+       System.out.println("User " + userName + " User's Id " + userId);
+       System.out.println("User's Current Balance " + userBalance);
+        userBalance -= withdraw;
+       System.out.println("User's New Balance " + userBalance);
+       System.out.println("------------------------------");
     }
 
     public static void main(String[] args) {
 
         BankAccount bankAccount = new BankAccount();
 
-        bankAccount.userId = 1234567;
-        bankAccount.userName = "Pavel_Yu";
-        bankAccount.userBalance = 5_000;
-
-        System.out.println("New balance on my account: " + bankAccount.addMoney(2_000) + "€");
-        bankAccount.userBalance = bankAccount.addMoney(2_000);
-        System.out.println("My balance after withdrawal: " + bankAccount.withdrawMoney(6_000)+ "€");
+        bankAccount.addMoney(750);
+        bankAccount.withdrawMoney(250);
 
     }
 
